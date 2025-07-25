@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Noto Sans KR', Arial, sans-serif;
-  background: #f8f9fa;
+  background: #fdfdfd;
   color: #222;
 }
 .container {
@@ -82,6 +82,7 @@ section {
 }
 .service ul {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   padding: 0;
   list-style: none;
@@ -92,9 +93,43 @@ section {
   padding: 16px 32px;
   border-radius: 8px;
   font-weight: 500;
+  min-width: 180px;
+  max-width: 220px;
+  text-align: center;
+  flex: 1 1 200px;
+}
+.hours {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-bottom: 30px;
+  padding: 60px 0;
+}
+.hours h2 {
+  color: #2b7a78;
+}
+.hours-list {
+  list-style: none;
+  padding: 0;
+  padding-left: 24px;
+  max-width: 420px;
+  margin: 0;
+}
+.hours-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.hours-list .label {
+  flex: 0 0 120px;
+  font-weight: bold;
+}
+.hours-list .value {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 footer {
-  background: #17252a;
+  background: linear-gradient(120deg, #2b7a78 0%, #3aafa9 100%);
   color: #fff;
   padding: 40px 0 20px 0;
 }
@@ -130,7 +165,60 @@ footer {
 .footer-copy {
   text-align: center;
   font-size: 0.95rem;
-  color: #b2b2b2;
+  color: #222;
+}
+.label {
+  font-weight: bold;
+}
+.tab {
+  display: inline-block;
+  width: 2.5em;
+}
+.contact-list.card-style {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contact-list.card-style li {
+  background: #f5fafd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 12px 18px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  display: flex;
+  align-items: center;
+  font-size: 1.05em;
+}
+.contact-list.card-style .icon {
+  margin-right: 12px;
+  font-size: 1.3em;
+  flex-shrink: 0;
+}
+.contact-flex {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.contact-info {
+  flex: 1 1 300px;
+  min-width: 220px;
+}
+.contact-map {
+  flex: 0 0 260px;
+  min-width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+@media (max-width: 800px) {
+  .contact-flex {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .contact-map {
+    justify-content: flex-start;
+  }
 }
 @media (max-width: 700px) {
   .container {
@@ -149,4 +237,22 @@ footer {
     flex-direction: column;
     gap: 10px;
   }
+}
+.footer-contact-list {
+  margin-top: 8px;
+}
+.footer-contact-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+.footer-contact-label {
+  min-width: 110px;
+  font-weight: bold;
+  color: #222;
+  display: inline-block;
+}
+.footer-contact-value {
+  color: #222;
+  display: inline-block;
 } 
